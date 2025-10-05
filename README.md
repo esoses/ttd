@@ -1,1 +1,1 @@
-just the neggining
+just the beggining
