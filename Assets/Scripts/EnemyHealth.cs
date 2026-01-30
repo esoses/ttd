@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -8,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float currentHealth;
 
-    public Action<GameObject> death;
+    public Action<GameObject> OnEnemyDeath;
 
     private void Start()
     {
@@ -18,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            death.Invoke(gameObject);
+            OnEnemyDeath?.Invoke(gameObject);
             Destroy(gameObject);
         }
     }

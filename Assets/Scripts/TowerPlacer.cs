@@ -6,7 +6,7 @@ public class TowerPlacer : MonoBehaviour
 {
     public GameObject towerToBuild;
 
-    void Update()
+    private void Update()
     {
 
         if (Input.GetMouseButtonDown(0))
@@ -29,7 +29,7 @@ public class TowerPlacer : MonoBehaviour
         }
     }
 
-    public void PlaceTower(GameObject tower, Vector3 position)
+    private void PlaceTower(GameObject tower, Vector3 position)
     {      
         Instantiate(tower, position, Quaternion.identity);      
     }
